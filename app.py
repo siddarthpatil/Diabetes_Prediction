@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import pickle
 import numpy as np
 st.title('Wee Deployment of Diabetes app')
@@ -11,8 +11,8 @@ if st.sidebar.checkbox('View Data',False):
     st.write(data)
 if st.sidebar.checkbox('View Graph',False):
     data.hist()
-    #plt.tight_layout()
-    #st.pyplot()
+    plt.tight_layout()
+    st.pyplot()
 
 # Load the pickle file
 model = open('rfc.pickle','rb')
