@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from matplotlib import pyplot  as plt
+#import matplotlib.pyplot as plt
 import pickle
 import numpy as np
 st.title('Wee Deployment of Diabetes app')
@@ -8,11 +8,11 @@ st.subheader('Is the person diabetic or not?')
 data = pd.read_csv('diabetes.csv')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 if st.sidebar.checkbox('View Data',False):
-    st.write(data)
-if st.sidebar.checkbox('View Graph',False):
-    data.hist()
-    plt.tight_layout()
-    st.pyplot()
+    #st.write(data)
+#if st.sidebar.checkbox('View Graph',False):
+    #data.hist()
+    #plt.tight_layout()
+    #st.pyplot()
 
 # Load the pickle file
 model = open('rfc.pickle','rb')
